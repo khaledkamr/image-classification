@@ -33,27 +33,21 @@ st.sidebar.markdown(
 st.title("🌟 Fruit & Vegetable Classifier 🌟")
 st.write("Upload an image of a fruit or vegetable, and this app will classify it for you!")
 
-# File uploader
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
-# Process and predict
 if uploaded_file:
     try:
-        # Load and preprocess image
         image_load = tf.keras.utils.load_img(uploaded_file, target_size=(img_height, img_width))
-        img_arr = tf.keras.utils.img_to_array(image_load)   # Normalize image
+        img_arr = tf.keras.utils.img_to_array(image_load)   
         img_bat = tf.expand_dims(img_arr, 0)
 
-        # Make prediction
         predict = model.predict(img_bat)
         score = tf.nn.softmax(predict)
 
-        # Display image
         st.image(uploaded_file, width=250, caption="Uploaded Image")
         
-        # Show results
         st.markdown(f"### Predicted Category: **{data_cat[np.argmax(score)]}**")
-        st.progress(int(np.max(score) * 100))  # Confidence bar
+        st.progress(int(np.max(score) * 100)) 
         st.markdown(f"### 🎯 Confidence: **{np.max(score) * 100:0.2f}%**")
     
     except Exception as e:
@@ -61,6 +55,5 @@ if uploaded_file:
 else:
     st.info("👆 Upload an image file to get started!")
 
-# Footer
 st.sidebar.markdown("---")
 st.sidebar.write("Developed with ❤️ by khaledkamr")
