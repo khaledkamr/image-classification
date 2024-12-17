@@ -1,6 +1,8 @@
 # Fruits and Vegetables Image Classification
 This project focuses on classifying images of fruits and vegetables using a **Convolutional Neural Network (CNN)** implemented in TensorFlow and Keras. The dataset is organized into three parts: training, validation, and test sets, and images are classified into distinct categories such as different fruits and vegetables.
 
+The model is trained using the **training dataset**, and performance is validated using the **validation dataset**. Results are visualized using accuracy and loss plots for both training and validation phases.
+
 ## Model Architecture
 The model is a Sequential CNN with the following layers:
 1. **Rescaling Layer**: Normalizes pixel values to the range [0, 1].
@@ -13,8 +15,6 @@ The model is a Sequential CNN with the following layers:
 5. **Dense Layers**: Fully connected layers:
    - Dense (128 units)
    - Dense (number of categories)
-
-The model is trained using the **training dataset**, and performance is validated using the **validation dataset**. Results are visualized using accuracy and loss plots for both training and validation phases.
 
 ## **Deploying the Web App**
 
