@@ -18,7 +18,6 @@ data_cat = [
 img_height = 180
 img_width = 180
 
-# Streamlit app
 st.set_page_config(page_title="Fruit & Vegetable Classifier", layout="centered")
 st.sidebar.title("About the Model")
 st.sidebar.markdown(
@@ -48,7 +47,7 @@ if uploaded_file:
         
         st.markdown(f"### Predicted Category: **{data_cat[np.argmax(score)]}**")
         st.progress(int(np.max(score) * 100)) 
-        st.markdown(f"### 🎯 Confidence: **{np.max(score) * 100:0.2f}%**")
+        st.markdown(f"### 🎯 Accuracy: **{np.max(score) * 100:0.2f}%**")
     
     except Exception as e:
         st.error("An error occurred while processing the image. Please try a different file.")
