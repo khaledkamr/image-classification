@@ -21,13 +21,3 @@ The model is a Sequential CNN with the following layers:
 - **Epochs**: 25
 
 The model is trained using the training dataset, and performance is validated using the validation dataset.
-
-## Results
-During training, the model's accuracy and loss are plotted for both training and validation sets. Key metrics:
-- Training Accuracy
-- Validation Accuracy
-- Training Loss
-- Validation Loss
-
-## Testing
-The model is tested on the unseen test dataset and can make predictions on individual images.
