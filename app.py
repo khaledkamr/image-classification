@@ -53,6 +53,3 @@ if uploaded_file:
         st.error("An error occurred while processing the image. Please try a different file.")
 else:
     st.info("👆 Upload an image file to get started!")
-
-st.sidebar.markdown("---")
-st.sidebar.write("Developed with ❤️ by khaledkamr")
