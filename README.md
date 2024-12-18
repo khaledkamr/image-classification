@@ -25,7 +25,6 @@ The trained model has been deployed as a **web application** using the **Streaml
 - View the predicted fruit or vegetable category.  
 - See the Accuracy score of the prediction. 
 
----
 
 ## **How to Run the Web App Locally**
 
