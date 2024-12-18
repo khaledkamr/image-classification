@@ -7,12 +7,15 @@ import numpy as np
 model = load_model('D:\GitHub\Collage projects\image-classification\Image_classify.keras')
 
 data_cat = [
-    'apple', 'banana', 'beetroot', 'bell pepper', 'cabbage', 'capsicum', 'carrot', 
-    'cauliflower', 'chilli pepper', 'corn', 'cucumber', 'eggplant', 'garlic', 
-    'ginger', 'grapes', 'jalepeno', 'kiwi', 'lemon', 'lettuce', 'mango', 
-    'onion', 'orange', 'paprika', 'pear', 'peas', 'pineapple', 'pomegranate', 
-    'potato', 'raddish', 'soy beans', 'spinach', 'sweetcorn', 'sweetpotato', 
-    'tomato', 'turnip', 'watermelon'
+    ['apple', '🍎'], ['banana', '🍌'], ['beetroot', '🌱'], ['bell pepper', ' '],
+    ['cabbage', '🥬'], ['capsicum', ' '], ['carrot', '🥕'], ['cauliflower', '🌸'],
+    ['chilli pepper', '🌶️'], ['corn', '🌽'], ['cucumber', '🥒'], ['eggplant', '🍆'],
+    ['garlic', '🧄'], ['ginger', ' '], ['grapes', '🍇'], ['jalepeno', '🌶️'],
+    ['kiwi', '🥝'], ['lemon', '🍋'], ['lettuce', '🥬'], ['mango', '🥭'],
+    ['onion', '🧅'], ['orange', '🍊'], ['paprika', '🌶️'], ['pear', '🍐'],
+    ['peas', '🟢'], ['pineapple', '🍍'], ['pomegranate', ' '], ['potato', '🥔'],
+    ['raddish', '🌱'], ['soy beans', ' '], ['spinach', '🥬'], ['sweetcorn', '🌽'],
+    ['sweetpotato', '🍠'], ['tomato', '🍅'], ['turnip', '🌱'], ['watermelon', '🍉']
 ]
 
 img_height = 180
@@ -45,7 +48,7 @@ if uploaded_file:
 
         st.image(uploaded_file, width=250, caption="Uploaded Image")
         
-        st.markdown(f"### Predicted Category: **{data_cat[np.argmax(score)]}**")
+        st.markdown(f"### Predicted Category: **{data_cat[np.argmax(score)][0]}** {data_cat[np.argmax(score)][1]}")
         st.progress(int(np.max(score) * 100)) 
         st.markdown(f"### 🎯 Accuracy: **{np.max(score) * 100:0.2f}%**")
     
