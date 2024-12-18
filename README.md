@@ -54,6 +54,8 @@ streamlit run app.py
 
 Here’s an example output after running the web app:
 
-![sample-1](https://github.com/user-attachments/assets/29adbf61-5362-43d0-9955-98fdb4f1a05a)
+![sample-1](https://github.com/user-attachments/assets/9bc4e0cf-7083-445c-ac85-d2fcf13e2ab8)
 
-![sample-2](https://github.com/user-attachments/assets/2e883191-af45-4596-992e-5c8c48007ec7)
+
+![sample-2](https://github.com/user-attachments/assets/9e48bbc8-8cd5-4358-a25b-01b5d8c3a8cf)
+
